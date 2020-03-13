@@ -143,6 +143,14 @@ metatable = {
 	dot = function(a, b)
 		return a.x * b.x + a.y * b.y
 	end,
+	
+	min = function(a, b)
+		return vec(math.min(a.x, b.x), math.min(a.y, b.y))
+	end,
+	
+	max = function(a, b)
+		return vec(math.max(a.x, b.x), math.max(a.y, b.y))
+	end,
 }
 
 vec = ffi.metatype("vec2", metatable)

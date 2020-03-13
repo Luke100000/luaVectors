@@ -4,7 +4,7 @@
 * supports per component addition (+), subtraction (-), multiplication (*), division (/), modulus (%) and pow (^)
 * supports equals (==)
 * supports length operator (#)
-* supports length(), lengthSquared(), dot() normalize(), abs() and clone()
+* supports length(), lengthSquared(), dot() normalize(), abs(), clone(), component wise min() and max()
 * supports cross() for vec3 only
 * supports toString()
 * can be indexed by x, y, z, w (recommended) or 1, 2, 3, 4 (slightly slower on JIT, faster on fallback)

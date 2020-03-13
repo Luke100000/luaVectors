@@ -101,7 +101,7 @@ metatable = {
 		elseif key == "w" then
 			return self[4]
 		else
-			return rawget(vec, key)
+			return rawget(metatable, key)
 		end
 	end,
 	
@@ -127,6 +127,14 @@ metatable = {
 	
 	dot = function(a, b)
 		return a[1] * b[1] + a[2] * b[2] + a[3] * b[3] + a[4] * b[4]
+	end,
+	
+	min = function(a, b)
+		return vec(math.min(a[1], b[1]), math.min(a[2], b[2]), math.min(a[3], b[3]), math.min(a[4], b[4]))
+	end,
+	
+	max = function(a, b)
+		return vec(math.max(a[1], b[1]), math.max(a[2], b[2]), math.max(a[3], b[3]), math.min(a[4], b[4]))
 	end,
 }
 

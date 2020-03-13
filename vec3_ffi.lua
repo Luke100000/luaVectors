@@ -149,6 +149,14 @@ metatable = {
 	cross = function(a, b)
 		return vec(a.y * b.z - a.z * b.y, a.z * b.x - a.x * b.z, a.x * b.y - a.y * b.x)
 	end,
+	
+	min = function(a, b)
+		return vec(math.min(a.x, b.x), math.min(a.y, b.y), math.min(a.z, b.z))
+	end,
+	
+	max = function(a, b)
+		return vec(math.max(a.x, b.x), math.max(a.y, b.y), math.max(a.z, b.z))
+	end,
 }
 
 vec = ffi.metatype("vec3", metatable)

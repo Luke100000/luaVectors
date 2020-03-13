@@ -130,6 +130,14 @@ metatable = {
 	cross = function(a, b)
 		return vec(a[2] * b[3] - a[3] * b[2], a[3] * b[1] - a[1] * b[3], a[1] * b[2] - a[2] * b[1])
 	end,
+	
+	min = function(a, b)
+		return vec(math.min(a[1], b[1]), math.min(a[2], b[2]), math.min(a[3], b[3]))
+	end,
+	
+	max = function(a, b)
+		return vec(math.max(a[1], b[1]), math.max(a[2], b[2]), math.max(a[3], b[3]))
+	end,
 }
 
 return setmetatable(vec, vec)
