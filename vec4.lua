@@ -136,6 +136,10 @@ metatable = {
 	max = function(a, b)
 		return vec(math.max(a[1], b[1]), math.max(a[2], b[2]), math.max(a[3], b[3]), math.min(a[4], b[4]))
 	end,
+	
+	unpack = function(a)
+		return a[1], a[2], a[3], a[4]
+	end,
 }
 
 return setmetatable(vec, vec)

@@ -155,6 +155,10 @@ metatable = {
 	max = function(a, b)
 		return vec(math.max(a.x, b.x), math.max(a.y, b.y), math.max(a.z, b.z), math.min(a.w, b.w))
 	end,
+	
+	unpack = function(a)
+		return a.x, a.y, a.z, a.w
+	end,
 }
 
 vec = ffi.metatype("vec4", metatable)
