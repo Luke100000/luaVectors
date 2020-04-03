@@ -142,6 +142,8 @@ metatable = {
 	unpack = function(a)
 		return a[1], a[2], a[3]
 	end,
+	
+	type = "vec3",
 }
 
 return setmetatable(vec, vec)
