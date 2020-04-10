@@ -101,6 +101,16 @@ metatable = {
 		end
 	end,
 	
+	__newindex = function(self, key, value)
+		if key == "x" then
+			rawset(self, 1, value)
+		elseif key == "y" then
+			rawset(self, 2, value)
+		else
+			error("vec is write protected")
+		end
+	end,
+	
 	clone = function(a)
 		return vec(a[1], a[2])
 	end,
