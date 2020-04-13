@@ -139,6 +139,10 @@ metatable = {
 		return a[1] * b[1] + a[2] * b[2] + a[3] * b[3]
 	end,
 	
+	reflect = function(i, n)
+		return i - 2 * n:dot(i) * n
+	end,
+	
 	cross = function(a, b)
 		return vec(a[2] * b[3] - a[3] * b[2], a[3] * b[1] - a[1] * b[3], a[1] * b[2] - a[2] * b[1])
 	end,

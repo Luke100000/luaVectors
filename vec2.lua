@@ -135,6 +135,10 @@ metatable = {
 		return a[1] * b[1] + a[2] * b[2]
 	end,
 	
+	reflect = function(i, n)
+		return i - 2 * n:dot(i) * n
+	end,
+	
 	min = function(a, b)
 		return vec(math.min(a[1], b[1]), math.min(a[2], b[2]))
 	end,
