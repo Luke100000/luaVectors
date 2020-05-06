@@ -111,7 +111,7 @@ metatable = {
 		elseif key == "z" then
 			rawset(self, 3, value)
 		else
-			error("vec is write protected")
+			rawset(self, key, value)
 		end
 	end,
 	
