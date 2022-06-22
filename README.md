@@ -20,10 +20,10 @@ local v1 = vec3(1.0, 1.0, 1.0)
 local v2 = vec3({1.0, 1.0, 1.0})
 
 --use operators
-local v3 = v1 * v2
+local v3 = v1 + v2
 
---or vector specific operatios
-local dot = v1:dot()
+--or other vector specific operatios
+local cp = v1:cross(v2)
 ```
 
 ## contribution
